@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: accents, text transform, uppercase, Greek
 Requires at least: 3.0
 Tested up to: 5.4
-Stable tag: 0.5.2
+Stable tag: 0.5.1
 License: GPLv2 or later
 
 Automatically removes accented characters from text content uppercase transformed through CSS.

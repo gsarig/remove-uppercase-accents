@@ -3,7 +3,7 @@
 	Plugin Name: Remove Uppercase Accents
 	Plugin URI: http://wordpress.org/plugins/remove-uppercase-accents/
 	Description: A Wordpress plugin that automatically removes accented characters (currently greek) from elements having their text content uppercase transformed through CSS (with "text-transform: uppercase;"). Currently the script transforms only greek text, but it can be easily extended to support other languages.
-	Version: 0.5.2
+	Version: 0.5.1
 	Author: Giorgos Sarigiannidis
 	Author URI: http://www.gsarigiannidis.gr/
 	*/
