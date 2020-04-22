@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: accents, text transform, uppercase, Greek
 Requires at least: 3.0
 Tested up to: 5.4
-Stable tag: 0.6
+Stable tag: 0.5.1
 License: GPLv2 or later
 
 Automatically removes accented characters from text content uppercase transformed through CSS.
@@ -45,6 +45,9 @@ Then you are probably checking the page with Firefox, which at the moment is the
 2. Greek text after activating the plugin
 
 == Changelog ==
+
+= 0.5.1 =
+Fixed a bug with WooCommerce and "Ship to different address" option on Checkout page.
 
 = 0.5 =
 * Added support for diaereses in diphthongs in Greek uppercase letters
