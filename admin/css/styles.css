@@ -1,0 +1,63 @@
+
+#rua_form .rua-js,
+#rua_form .rua-php {
+    display: none;
+}
+
+.rua_info {
+    padding: 1em 2em;
+    background: #fff;
+    border-radius: 5px;
+    height: min-content;
+    border: 1px solid #ededed;
+}
+
+#rua_form h2,
+#rua_form .form-table {
+    height: min-content;
+}
+
+.form-table th {
+    max-width: 100px;
+}
+
+#rua_form .form-table td {
+    vertical-align: top;
+}
+
+#rua_form[data-current="js"] .rua-js,
+#rua_form[data-current="php"] .rua-php {
+    display: table-row;
+}
+
+.rua-mode {
+    border-bottom: 1px solid #ccc;
+}
+
+#rua_field_selectors {
+    width: 100%;
+    max-width: 580px;
+    min-height: 120px;
+}
+
+.rua-colophon {
+    border-top: 1px solid #ddd;
+    padding-top: 1em;
+    margin-top: 2em;
+    font-size: 90%;
+}
+
+@media all and (min-width: 760px) {
+    #rua_form form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1em;
+        grid-template-rows: auto auto auto;
+    }
+
+    .rua_info {
+        grid-row-end: 5;
+        grid-row-start: 1;
+        grid-column-start: 2;
+    }
+}

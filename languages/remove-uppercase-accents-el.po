@@ -1,0 +1,255 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Remove Uppercase Accents\n"
+"POT-Creation-Date: 2020-08-25 02:10+0300\n"
+"PO-Revision-Date: 2020-08-25 02:18+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: remove-uppercase-accents.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: includes/Options.class.php:29 remove-uppercase-accents.php:26
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: includes/Options.class.php:35
+msgid "Plugin mode"
+msgstr "Τρόπος λειτουργίας"
+
+#: includes/Options.class.php:47
+msgid "Selectors"
+msgstr "Επιλογείς CSS (CSS selectors)"
+
+#: includes/Options.class.php:59
+msgid "Places"
+msgstr "Σημεία"
+
+#: includes/Options.class.php:74
+msgid "Instructions:"
+msgstr "Οδηγίες:"
+
+#: includes/Options.class.php:76
+msgid "Select the mode that best fits your case:"
+msgstr ""
+"Επιλέξτε τον τρόπο λειτουργίας που ταιριάζει καλύτερα στην περίπτωσή σας:"
+
+#: includes/Options.class.php:80
+msgid ""
+"The <strong>jQuery</strong> mode is the old version of the script, which is "
+"kept as default to avoid breaking existing installations. For better "
+"performance, you are encouraged to try any of the other options."
+msgstr ""
+"Η επιλογή <strong>jQuery</strong> αφορά στην παλιά έκδοση του script, και "
+"διατηρείται ως προεπιλογή για να αποφευχθούν τυχόν προβλήματα σε υπάρχουσες "
+"εγκαταστάσεις. Για καλύτερη απόδοση, ωστόσο, συνίσταται να δοκιμάσετε κάποια "
+"από τις άλλες επιλογές."
+
+#: includes/Options.class.php:84
+msgid ""
+"<strong>JavaScript</strong> mode is the same script, but with no jQuery "
+"dependency. Also, it allows you to target specific selectors."
+msgstr ""
+"Η επιλογή <strong>JavaScript</strong> πρόκειται για την έκδοση του script "
+"χωρίς την εξάρτηση από την jQuery. Επίσης, σας επιτρέπει να στοχεύσετε "
+"συγκεκριμένους επιλογείς CSS."
+
+#: includes/Options.class.php:88
+msgid ""
+"<strong>PHP</strong> mode will not load any scripts at all and will do the "
+"replacement server-side. It should be faster that the previous options but "
+"can only be applied on specific parts of your website."
+msgstr ""
+"Η επιλογή <strong>PHP</strong> δεν θα φορτώσει κανένα script και θα "
+"επιχειρήσει να κάνει την αντικατάσταση σε επίπεδο server. Είναι πιο γρήγορη "
+"από τις άλλες επιλογές, αλλά μπορεί να εφαρμοστεί μόνο σε συγκεκριμένα "
+"σημεία του ιστοχώρου σας."
+
+#: includes/Options.class.php:92
+msgid ""
+"<strong>Manual</strong> mode is mostly for those who build their own themes "
+"or want to do things manually. It will practically deactivate all scripts "
+"and it will run no PHP filters. You will still have access to the "
+"<code>remove_greek_accents($text)</code> function, though, to apply the "
+"replacement on any string you want."
+msgstr ""
+"Η επιλογή <strong>Χειροκίνητα</strong> απευθύνεται σε όσους κατασκευάζουν τα "
+"δικά τους Θέματα (Themes) ή προτιμούν να διαχειριστούν την μετατροπή "
+"χειροκίνητα. Δεν φορτώνει κανένα script, ούτε και τρέχει κάποιον κώδικα PHP. "
+"Διατηρεί, ωστόσο, την συνάρτηση<code>remove_greek_accents($text)</code> την "
+"οποία μπορείτε να χρησιμοποιήσετε σε όποιο σημείο του κώδικά σας θέλετε."
+
+#: includes/Options.class.php:96
+msgid ""
+"Options are ordered from the easiest to implement to the most advanced. You "
+"can keep the defaults and forget it or you can try them all until you find "
+"the one which works best for you."
+msgstr ""
+"Οι επιλογές ταξινομούνται από την ευκολότερη στην πιο προχωρημένη. Μπορείτε "
+"να κρατήσετε τις προεπιλογές και να μην ασχοληθείτε περαιτέρω ή να "
+"δοκιμάσετε όλες τις επιλογές μέχρι να βρείτε την πιο κατάλληλη για την "
+"περίπτωσή σας."
+
+#: includes/Options.class.php:99
+msgid "Tips"
+msgstr "Συμβουλές"
+
+#: includes/Options.class.php:101
+msgid ""
+"If the content that needs to be transformed is on one of the places "
+"supported by the <code>PHP</code> option, you should always prefer it, as it "
+"takes care of the transform on the server's side, skipping entirely the "
+"loading of scripts."
+msgstr ""
+"Εάν το περιεχόμενο που πρέπει να μετατραπεί περιλαμβάνεται σε κάποιο από τα "
+"σημεία που υποστηρίζονται από την επιλογή <code>PHP</code> συνίσταται να την "
+"προτιμάτε, καθώς τρέχει σε επίπεδο server και αποφεύγει εντελώς το φόρτωμα "
+"των scripts."
+
+#: includes/Options.class.php:103
+msgid ""
+"If that isn't the case and you use a ready-made theme where you don't want "
+"to mess with the child theme, you should choose the <code>JavaScript</code> "
+"option. If you know the selectors that you want to target, you are "
+"encouraged to do so, as this will highly improve the script's performance. "
+msgstr ""
+"Εάν αυτό δεν ισχύει στην περίπτωσή σας ή δεν θέλετε να τροποποιήσετε το "
+"child theme, συνίσταται να προτιμήσετε την επιλογή <code>JavaScript</code>. "
+"Εάν γνωρίζετε τους επιλογείς CSS τους οποίους θέλετε να στοχεύσετε, καλό "
+"είναι να το κάνετε καθώς θα βελτιώσει την απόδοση του script. "
+
+#: includes/Options.class.php:105
+msgid ""
+"If this option doesn't work for you or if you need to support legacy "
+"browsers, you can always switch it to the good old <code>jQuery</code>."
+msgstr ""
+"Εάν και το παραπάνω σας δημιουργεί κάποιο πρόβλημα ή θέλετε να υποστηρίξετε "
+"παλιούς φυλλομετρητές, μπορείτε πάντα να επιστρέψετε στην πατροπαράδοτη "
+"<code>jQuery</code>."
+
+#: includes/Options.class.php:107
+msgid ""
+"If you build a custom theme and you know your PHP, you should turn on the "
+"<code>Manual</code> mode and use the <code>remove_greek_accents($text)</"
+"code> function anywhere in your code."
+msgstr ""
+"Εάν χτίζετε το δικό σας Θέμα ή εάν η ιδέα του να γράψετε PHP δεν σας "
+"προκαλεί πανικό, η <code>Χειροκίνητη</code> επιλογή απενεργοποιεί τα πάντα "
+"εκτός από την συνάρτηση <code>remove_greek_accents($text)</code> που "
+"μπορείτε να χρησιμοποιήσετε σε οποιοδήποτε σημείο του Θέματός σας."
+
+#: includes/Options.class.php:110
+msgid "Support forum"
+msgstr "Φόρουμ υποστήριξης"
+
+#: includes/Options.class.php:112
+#, php-format
+msgid ""
+"Plugin created by <a href=\"%s\" target=\"_blank\">Giorgos Sarigiannidis</a>"
+msgstr "Ανάπτυξη: <a href=\"%s\" target=\"_blank\">Γιώργος Σαρηγιαννίδης</a>"
+
+#: includes/Options.class.php:133
+msgid "jQuery"
+msgstr "jQuery"
+
+#: includes/Options.class.php:138
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: includes/Options.class.php:143
+msgid "PHP"
+msgstr "PHP"
+
+#: includes/Options.class.php:148
+msgid "Manual"
+msgstr "Χειροκίνητη"
+
+#: includes/Options.class.php:160
+msgid ""
+"You can use any CSS selector. Multiple selectors should be separated by "
+"comma. Example: <code>.selector-1 > h2, #selector-2, .selector-4 > div span</"
+"code>"
+msgstr ""
+"Μπορείτε να χρησιμοποιήσετε οποιονδήποτε επιλογέα CSS (κλάσεις, ID κλπ). "
+"Πολλαπλοί επιλογείς χωρίζονται με κόμμα. Παράδειγμα: <code>.selector-1 > h2, "
+"#selector-2, .selector-4 > div span</code>"
+
+#: includes/Options.class.php:172
+msgid "Select the parts of the website where the replacement should happen."
+msgstr ""
+"Επιλέξτε τα σημεία του ιστοχώρου σας όπου θέλετε να τρέξει η αντικατάσταση."
+
+#: includes/Options.class.php:179
+msgid "Menu (hooks to <code>wp_nav_menu_items()</code>)"
+msgstr "Μενού (hook στο <code>wp_nav_menu_items()</code>)"
+
+#: includes/Options.class.php:186
+msgid "Title (hooks to <code>the_title()</code>)"
+msgstr "Τίτλος (hook στο<code>the_title()</code>)"
+
+#: includes/Options.class.php:193
+msgid "Excerpt (hooks to <code>the_excerpt()</code>)"
+msgstr "Σύνοψη (hook στο <code>the_excerpt()</code>)"
+
+#: includes/Options.class.php:201
+msgid "Widget title (hooks to <code>widget_title()</code>)"
+msgstr "Τίτλος Μικροεφαρμογών (hook στο <code>widget_title()</code>)"
+
+#: includes/Options.class.php:209
+msgid "Tags (hooks to <code>the_tags()</code>)"
+msgstr "Ετικέτες (hook στο <code>the_tags()</code>)"
+
+#: includes/Options.class.php:217
+msgid "Categories (hooks to <code>the_category()</code>)"
+msgstr "Κατηγορίες (hook στο <code>the_category()</code>)"
+
+#: includes/Options.class.php:224
+msgid "Content (hooks to <code>the_content()</code>)"
+msgstr "Κυρίως περιεχόμενο (hook στο <code>the_content()</code>)"
+
+#: includes/Options.class.php:249
+msgid "Settings Saved"
+msgstr "Οι ρυθμίσεις αποθηκεύτηκαν"
+
+#: includes/Options.class.php:262
+msgid "Save Settings"
+msgstr "Αποθήκευση"
+
+#. Plugin Name of the plugin/theme
+msgid "Remove Uppercase Accents"
+msgstr "Remove Uppercase Accents"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/plugins/remove-uppercase-accents/"
+msgstr "http://el.wordpress.org/plugins/remove-uppercase-accents/"
+
+#. Description of the plugin/theme
+msgid ""
+"A Wordpress plugin that automatically removes accented characters (currently "
+"greek) from elements having their text content uppercase transformed through "
+"CSS (with \"text-transform: uppercase;\"). Currently the script transforms "
+"only greek text, but it can be easily extended to support other languages."
+msgstr ""
+"Ένα πρόσθετο που αφαιρεί αυτόματα τους τόνους από τα στοιχεία των οποίων το "
+"κείμενο έχει μετατραπεί σε κεφαλαία μέσω CSS (με την εντολή \"text-"
+"transform: uppercase;\")."
+
+#. Author of the plugin/theme
+msgid "Giorgos Sarigiannidis"
+msgstr "Γιώργος Σαρηγιαννίδης"
+
+#. Author URI of the plugin/theme
+msgid "http://www.gsarigiannidis.gr/"
+msgstr "http://www.gsarigiannidis.gr/"

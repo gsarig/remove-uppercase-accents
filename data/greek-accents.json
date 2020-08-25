@@ -1,0 +1,132 @@
+{
+  "letters": [
+    {
+      "original": "ΆΙ",
+      "convert": "ΑΪ"
+    },
+    {
+      "original": "ΆΥ",
+      "convert": "ΑΫ"
+    },
+    {
+      "original": "ΈΙ",
+      "convert": "ΕΪ"
+    },
+    {
+      "original": "ΌΙ",
+      "convert": "ΟΪ"
+    },
+    {
+      "original": "ΈΥ",
+      "convert": "ΕΫ"
+    },
+    {
+      "original": "ΌΥ",
+      "convert": "ΟΫ"
+    },
+    {
+      "original": "άι",
+      "convert": "αϊ"
+    },
+    {
+      "original": "έι",
+      "convert": "εϊ"
+    },
+    {
+      "original": "Άυ",
+      "convert": "αϋ"
+    },
+    {
+      "original": "άυ",
+      "convert": "αϋ"
+    },
+    {
+      "original": "όι",
+      "convert": "οϊ"
+    },
+    {
+      "original": "Έυ",
+      "convert": "εϋ"
+    },
+    {
+      "original": "έυ",
+      "convert": "εϋ"
+    },
+    {
+      "original": "όυ",
+      "convert": "οϋ"
+    },
+    {
+      "original": "Όυ",
+      "convert": "οϋ"
+    },
+    {
+      "original": "Ά",
+      "convert": "Α"
+    },
+    {
+      "original": "ά",
+      "convert": "α"
+    },
+    {
+      "original": "Έ",
+      "convert": "Ε"
+    },
+    {
+      "original": "έ",
+      "convert": "ε"
+    },
+    {
+      "original": "Ή",
+      "convert": "Η"
+    },
+    {
+      "original": "ή",
+      "convert": "η"
+    },
+    {
+      "original": "Ί",
+      "convert": "Ι"
+    },
+    {
+      "original": "Ϊ",
+      "convert": "Ι"
+    },
+    {
+      "original": "ί",
+      "convert": "ι"
+    },
+    {
+      "original": "ΐ",
+      "convert": "ϊ"
+    },
+    {
+      "original": "Ό",
+      "convert": "Ο"
+    },
+    {
+      "original": "ό",
+      "convert": "ο"
+    },
+    {
+      "original": "Ύ",
+      "convert": "Υ"
+    },
+    {
+      "original": "ύ",
+      "convert": "υ"
+    },
+    {
+      "original": "ΰ",
+      "convert": "ϋ"
+    },
+    {
+      "original": "Ώ",
+      "convert": "Ω"
+    },
+    {
+      "original": "ώ",
+      "convert": "ω"
+    }
+  ]
+}
