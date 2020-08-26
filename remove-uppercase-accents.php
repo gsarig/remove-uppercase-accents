@@ -6,6 +6,8 @@ Description: A Wordpress plugin that automatically removes accented characters (
 Version: 1.0
 Author: Giorgos Sarigiannidis
 Author URI: https://www.gsarigiannidis.gr/
+Text Domain: remove-uppercase-accents
+Domain Path: /languages
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
