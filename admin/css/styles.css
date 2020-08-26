@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 
 #rua_form .rua-js,
 #rua_form .rua-php {
@@ -46,6 +49,89 @@
     margin-top: 2em;
     font-size: 90%;
 }
+
+.rua-tips-container .rua-tips {
+    display: block;
+    padding-left: 2em;
+    position: relative;
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.rua-tips-container .rua-tips::before {
+    content: '';
+    width: 4px;
+    height: 0;
+    border-radius: 3px;
+    position: absolute;
+    background: #46b450;
+    left: 1em;
+    display: block;
+    transition: all 400ms ease-in-out 100ms;
+}
+
+.rua-tips-container.open .rua-tips::before {
+    height: 100%;
+
+}
+
+.rua-tips-container h3 {
+    cursor: pointer;
+    position: relative;
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+}
+
+.rua-tips-container h3 a {
+    color: #23282d;
+    text-decoration: none;
+}
+
+.rua-tips-container h3::before {
+    content: '+';
+}
+
+.rua-tips-container.open h3::before {
+    content: '-';
+}
+
+.rua-tips-container h3::after {
+    content: '\25b6';
+    margin-left: 5px;
+    position: absolute;
+    top: 2px;
+    font-size: 10px;
+    transition: all 100ms ease-in-out;
+}
+
+.rua-tips-container.open h3 {
+    opacity: .8;
+}
+
+.rua-tips-container.open h3::after {
+    transform: rotate(90deg);
+    top: 3px;
+
+}
+
+.rua-tips-container h4 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: .5rem;
+    margin-bottom: 0;
+}
+
+.rua-tips-container.faq p {
+    padding-left: 1rem;
+}
+
+.rua-tips-container.open .rua-tips {
+    opacity: 1;
+    height: auto;
+    transition: opacity 300ms;
+    visibility: visible;
+}
+
 
 @media all and (min-width: 760px) {
     #rua_form form {

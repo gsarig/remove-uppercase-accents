@@ -4,24 +4,23 @@
 (function () {
 	'use strict';
 
-	removeUppercaseAccents();
+	window.addEventListener('DOMContentLoaded', function () {
+		removeUppercaseAccents();
+	});
+
 	ajaxLoaded(removeUppercaseAccents);
 
 	// Remove the uppercase accents.
 	function removeUppercaseAccents() {
-		document.addEventListener('DOMContentLoaded', function () {
-			const letters = rua.data.letters;
-
-			for (const entry of getSelectorsList()) {
-				let text = (entry.tagName && entry.tagName.toLowerCase() === 'input') ? entry.value : entry.innerHTML;
-				letters.forEach(function (item) {
-					const reg = new RegExp(item.original, 'g');
-					text = text.replace(reg, item.convert);
-				});
-				entry.innerHTML = text;
-			}
-
-		});
+		const accents = rua.accents;
+		for (const entry of getSelectorsList()) {
+			let text = (entry.tagName && entry.tagName.toLowerCase() === 'input') ? entry.value : entry.innerHTML;
+			accents.forEach(function (item) {
+				const reg = new RegExp(item.original, 'g');
+				text = text.replace(reg, item.convert);
+			});
+			entry.innerHTML = text;
+		}
 	}
 
 	// Get the selectors' list.

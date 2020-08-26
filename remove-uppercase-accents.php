@@ -1,20 +1,41 @@
 <?php
-	/*
-	Plugin Name: Remove Uppercase Accents
-	Plugin URI: http://wordpress.org/plugins/remove-uppercase-accents/
-	Description: A Wordpress plugin that automatically removes accented characters (currently greek) from elements having their text content uppercase transformed through CSS (with "text-transform: uppercase;"). Currently the script transforms only greek text, but it can be easily extended to support other languages.
-	Version: 0.5.1
-	Author: Giorgos Sarigiannidis
-	Author URI: http://www.gsarigiannidis.gr/
-	*/
+/*
+Plugin Name: Remove Uppercase Accents
+Plugin URI: http://wordpress.org/plugins/remove-uppercase-accents/
+Description: A Wordpress plugin that automatically removes accented characters (currently greek) from elements having their text content uppercase transformed through CSS (with "text-transform: uppercase;"). Currently the script transforms only greek text, but it can be easily extended to support other languages.
+Version: 1.0
+Author: Giorgos Sarigiannidis
+Author URI: https://www.gsarigiannidis.gr/
+*/
 
-	load_plugin_textdomain('remove-uppercase-accents', false, basename( dirname( __FILE__ ) ) . '/languages' ); // Localize it
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-	function remove_uppercase_accents() {
-		wp_enqueue_script(
-			'remove-uppercase-accents',
-			plugins_url( '/js/jquery.remove-upcase-accents.js' , __FILE__ ), array( 'jquery' )
-		);
-	}
+use RUA\App;
+use RUA\Options;
 
-	add_action( 'wp_enqueue_scripts', 'remove_uppercase_accents' );
+define( 'RUA_PLUGIN_VERSION', '1.0' );
+
+// Localize the plugin.
+add_action( 'init', 'rua_load_textdomain' );
+function rua_load_textdomain() {
+	load_plugin_textdomain( 'remove-uppercase-accents', false, basename( dirname( __FILE__ ) ) . '/languages' );
+}
+
+// Add settings link on plugin page.
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'rua_settings_links' );
+function rua_settings_links( $links ) {
+	array_unshift( $links,
+		'<a href="' . admin_url( 'admin.php?page=remove-uppercase-accents' ) . '">' . __( 'Settings',
+			'remove-uppercase-accents' ) . '</a>' );
+
+	return $links;
+}
+
+include_once dirname( __FILE__ ) . '/admin/Options.class.php';
+include_once dirname( __FILE__ ) . '/includes/App.class.php';
+include_once dirname( __FILE__ ) . '/includes/functions.php';
+
+new Options();
+new App();

@@ -1,6 +1,6 @@
 <?php
 /**
- * WordPress Filters
+ * WordPress filter hooks
  *
  * @package Remove_Uppercase_Accents
  * @since 1.0
@@ -8,6 +8,9 @@
 
 namespace RUA;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 class App {
 	/**
@@ -17,6 +20,9 @@ class App {
 
 	public function __construct() {
 		$this->options = get_option( 'rua_options' );
+
+		add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ] );
+
 		if ( ! $this->options || ! isset( $this->options['rua_field_mode'] ) || 'php' !== $this->options['rua_field_mode'] || ! isset( $this->options['rua_field_filters'] ) ) {
 			return;
 		}
@@ -94,9 +100,9 @@ class App {
 	}
 
 	public static function removeAccents( $string ) {
-		$matches = self::matches();
-		if ( $matches && isset( $matches->letters ) ) {
-			foreach ( $matches->letters as $match ) {
+		$data = self::data();
+		if ( $data && isset( $data->accents ) ) {
+			foreach ( $data->accents as $match ) {
 				if ( $match && isset( $match->original ) && isset( $match->convert ) ) {
 					$string = str_replace( $match->original, $match->convert, $string );
 				}
@@ -106,15 +112,40 @@ class App {
 		return $string;
 	}
 
-	public static function matches() {
-		$data      = '';
-		$json_file = trailingslashit( plugin_dir_url( dirname( __FILE__ ) ) ) . 'data/greek-accents.json';
-		$request   = wp_safe_remote_get( $json_file );
-		if ( ! is_wp_error( $request ) ) {
-			$body = wp_remote_retrieve_body( $request );
-			$data = json_decode( $body );
+	function scripts() {
+		if ( isset( $this->options['rua_field_mode'] ) && in_array( $this->options['rua_field_mode'],
+				[ 'php', 'manual' ],
+				true ) ) {
+			return;
 		}
+		$handle    = '';
+		$prefix    = '';
+		$deps      = [];
+		$selectors = isset( $this->options['rua_field_selectors'] ) ? $this->options['rua_field_selectors'] : '';
+		if ( ! isset( $this->options['rua_field_mode'] ) || 'jquery' === $this->options['rua_field_mode'] ) {
+			$handle    = 'jquery-';
+			$prefix    = 'jquery.';
+			$deps      = [ 'jquery' ];
+			$selectors = '';
+		}
+		$data = self::data();
+		wp_enqueue_script(
+			$handle . 'remove-uppercase-accents',
+			plugins_url( '/js/' . $prefix . 'remove-uppercase-accents.js', dirname( __FILE__ ) ),
+			$deps
+		);
+		wp_localize_script( $handle . 'remove-uppercase-accents',
+			'rua',
+			[
+				'accents'   => $data->accents,
+				'selectors' => isset( $selectors ) && $selectors && ! empty( $selectors ) ? $selectors : '',
+			] );
+	}
 
-		return $data;
+	public static function data() {
+		$json_file = trailingslashit( plugin_dir_path( dirname( __FILE__ ) ) ) . 'data/greek-accents.json';
+		$request   = file_get_contents( $json_file );
+
+		return json_decode( $request );
 	}
 }
