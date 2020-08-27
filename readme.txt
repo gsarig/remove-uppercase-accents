@@ -49,6 +49,7 @@ Then your site's language isn't set to Greek. If your content is in Greek, you s
 
 = 1.1 =
 * NEW Feature: Option to choose whether to use the custom selectors inclusively or exclusively on JavaScript mode.
+* Moved the plugin's options panel under Settings
 
 = 1.0 =
 Major update with many an options panel and new features:

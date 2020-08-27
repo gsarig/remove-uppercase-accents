@@ -29,7 +29,7 @@ function rua_load_textdomain() {
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'rua_settings_links' );
 function rua_settings_links( $links ) {
 	array_unshift( $links,
-		'<a href="' . admin_url( 'admin.php?page=remove-uppercase-accents' ) . '">' . __( 'Settings',
+		'<a href="' . admin_url( 'options-general.php?page=remove-uppercase-accents' ) . '">' . __( 'Settings',
 			'remove-uppercase-accents' ) . '</a>' );
 
 	return $links;

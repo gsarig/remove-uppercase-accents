@@ -271,13 +271,13 @@ class Options {
 	}
 
 	function rua_options_page() {
-		add_menu_page(
+		add_submenu_page(
+			'options-general.php',
 			'Remove Uppercase Accents',
 			'Remove Uppercase Accents',
 			'manage_options',
 			'remove-uppercase-accents',
-			[ $this, 'rua_options_page_html' ],
-			'dashicons-editor-spellcheck'
+			[ $this, 'rua_options_page_html' ]
 		);
 	}
 
@@ -286,13 +286,6 @@ class Options {
 			return;
 		}
 
-		if ( isset( $_GET['settings-updated'] ) ) {
-			add_settings_error( 'rua_messages',
-				'rua_message',
-				__( 'Settings Saved', 'remove-uppercase-accents' ),
-				'updated' );
-		}
-		settings_errors( 'rua_messages' );
 		$options = get_option( 'rua_options' );
 		$current = isset( $options['rua_field_mode'] ) && $options['rua_field_mode'] ? $options['rua_field_mode'] : '';
 		?>
@@ -318,7 +311,7 @@ class Options {
 	}
 
 	function enqueues( $hook ) {
-		if ( 'toplevel_page_remove-uppercase-accents' !== $hook ) {
+		if ( 'settings_page_remove-uppercase-accents' !== $hook ) {
 			return;
 		}
 		wp_enqueue_style( 'rua-styles',
