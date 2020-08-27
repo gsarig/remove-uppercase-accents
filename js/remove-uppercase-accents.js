@@ -25,14 +25,22 @@
 
 	// Get the selectors' list.
 	function getSelectorsList() {
-		const manuallySetSelectors = rua.selectors;
 		const cssProp = 'text-transform';
 		const cssValue = 'uppercase';
-		const selectors = (false === manuallySetSelectors.isEmpty()) ? manuallySetSelectors : findUppercaseSelectors();
+		const manuallySetSelectors = rua.selectors;
+		const action = rua.selAction;
+		let selectors = findUppercaseSelectors();
+
+		if ('exclude' === action && false === manuallySetSelectors.isEmpty()) {
+			selectors = withoutExcludedSelectors(manuallySetSelectors);
+		} else if (false === manuallySetSelectors.isEmpty()) {
+			selectors = manuallySetSelectors;
+		}
+
 		const selectorsArr = document.querySelectorAll(selectors);
 		const l = selectorsArr.length;
-		let i, results = [];
 
+		let i, results = [];
 		for (i = 0; i < l; i++) {
 			// Test whether the element is really text-transform:uppercase;
 			if (window.getComputedStyle(selectorsArr[i], null).getPropertyValue(cssProp) === cssValue) {
@@ -40,6 +48,23 @@
 			}
 		}
 		return results;
+	}
+
+	// Exclude specific selectors
+	function withoutExcludedSelectors(manuallySet) {
+		const excludesArr = manuallySet.split(',');
+		let withoutExcludes = findUppercaseSelectors().split(',').map(function (item) {
+			return item.trim();
+		});
+		for (const selector of excludesArr) {
+			const trimmed = selector.trim();
+			if (withoutExcludes.includes(trimmed)) {
+				withoutExcludes = withoutExcludes.filter(function (e) {
+					return e !== trimmed;
+				});
+			}
+		}
+		return withoutExcludes.join(',');
 	}
 
 	// Find all CSS selectors that use text-transform:uppercase.

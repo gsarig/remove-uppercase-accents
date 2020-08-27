@@ -171,12 +171,36 @@ class Options {
 
 	function rua_field_selectors_cb( $args ) {
 		$option = get_option( 'rua_options' );
+		$action = isset( $option['rua_field_action'] ) ? $option['rua_field_action'] : 'include';
 		?>
+		<div class="rua_radio-inline">
+			<input type="radio"
+				   id="rua_field_action_include"
+				   name="rua_options[rua_field_action]"
+				   value="include"
+				<?php checked( 'include', $action, true ); ?>>
+			<label for="rua_field_action_include">
+				<?php _e( 'Include', 'remove-uppercase-accents' ); ?>
+			</label>
+			<input type="radio"
+				   id="rua_field_action_exclude"
+				   name="rua_options[rua_field_action]"
+				   value="exclude"
+				<?php checked( 'exclude', $action, true ); ?>>
+			<label for="rua_field_action_exclude">
+				<?php _e( 'Exclude', 'remove-uppercase-accents' ); ?>
+			</label>
+		</div>
+
 		<textarea name="rua_options[<?php echo esc_attr( $args['label_for'] ); ?>]"
 				  data-custom="<?php echo esc_attr( $args['rua_custom_data'] ); ?>"
 				  id="<?php echo esc_attr( $args['label_for'] ); ?>"><?php echo isset( $option[ $args['label_for'] ] ) ? $option[ $args['label_for'] ] : ''; ?></textarea>
-		<p><?php _e( 'You can use any CSS selector. Multiple selectors should be separated by comma. Example: <code>.selector-1 > h2, #selector-2, .selector-4 > div span</code>',
-				'remove-uppercase-accents' ); ?></p>
+		<div class="rua_field_info">
+			<p><?php _e( 'You can use any CSS selector. Multiple selectors should be separated by comma. Example: <code>.selector-1 > h2, #selector-2, .selector-4 > div span</code>. Make sure that you copy the selectors exactly as they appear on your CSS (you can use your browser\'s developer tools to do so).',
+					'remove-uppercase-accents' ); ?></p>
+			<p><?php _e( 'Using it with the <code>Include</code> option enabled will target <strong>only</strong> the given selectors. <code>Exclude</code>, on the other hand, will target everything <strong>except</strong> from the given selectors. Leaving it empty will target everything, no matter which option you choose.',
+					'remove-uppercase-accents' ); ?></p>
+		</div>
 		<?php
 	}
 

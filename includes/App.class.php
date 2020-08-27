@@ -121,11 +121,13 @@ class App {
 		$handle    = '';
 		$prefix    = '';
 		$deps      = [];
+		$action    = isset( $this->options['rua_field_action'] ) ? $this->options['rua_field_action'] : '';
 		$selectors = isset( $this->options['rua_field_selectors'] ) ? $this->options['rua_field_selectors'] : '';
 		if ( ! isset( $this->options['rua_field_mode'] ) || 'jquery' === $this->options['rua_field_mode'] ) {
 			$handle    = 'jquery-';
 			$prefix    = 'jquery.';
 			$deps      = [ 'jquery' ];
+			$action    = '';
 			$selectors = '';
 		}
 		$data = self::data();
@@ -139,6 +141,7 @@ class App {
 			[
 				'accents'   => $data->accents,
 				'selectors' => isset( $selectors ) && $selectors && ! empty( $selectors ) ? $selectors : '',
+				'selAction' => $action,
 			] );
 	}
 

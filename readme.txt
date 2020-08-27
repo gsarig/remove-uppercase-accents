@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: accents, text transform, uppercase, Greek
 Requires at least: 3.0
 Tested up to: 5.5
-Stable tag: 1.0.2
+Stable tag: 1.1
 License: GPLv2 or later
 
 Automatically removes accented characters from text content uppercase transformed through CSS.
@@ -42,9 +42,13 @@ Then your site's language isn't set to Greek. If your content is in Greek, you s
 
 1. Greek text without the plugin
 2. Greek text after activating the plugin
-3. The plugin's control panel
+3. JavaScript mode options on the plugin's control panel
+4. PHP mode options
 
 == Changelog ==
+
+= 1.1 =
+* NEW Feature: Option to choose whether to use the custom selectors inclusively or exclusively on JavaScript mode.
 
 = 1.0 =
 Major update with many an options panel and new features:

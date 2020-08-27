@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Remove Uppercase Accents\n"
-"POT-Creation-Date: 2020-08-25 19:27+0300\n"
-"PO-Revision-Date: 2020-08-25 19:46+0300\n"
+"POT-Creation-Date: 2020-08-27 00:18+0300\n"
+"PO-Revision-Date: 2020-08-27 00:24+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: el\n"
@@ -21,32 +21,32 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: includes/Options.class.php:29 remove-uppercase-accents.php:26
+#: admin/Options.class.php:32 remove-uppercase-accents.php:32
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
-#: includes/Options.class.php:35
+#: admin/Options.class.php:38
 msgid "Plugin mode"
 msgstr "Τρόπος λειτουργίας"
 
-#: includes/Options.class.php:47
+#: admin/Options.class.php:50
 msgid "Selectors"
 msgstr "Επιλογείς CSS (CSS selectors)"
 
-#: includes/Options.class.php:59
+#: admin/Options.class.php:62
 msgid "Places"
 msgstr "Σημεία"
 
-#: includes/Options.class.php:74
+#: admin/Options.class.php:77
 msgid "Instructions:"
 msgstr "Οδηγίες:"
 
-#: includes/Options.class.php:76
+#: admin/Options.class.php:79
 msgid "Select the mode that best fits your case:"
 msgstr ""
 "Επιλέξτε τον τρόπο λειτουργίας που ταιριάζει καλύτερα στην περίπτωσή σας:"
 
-#: includes/Options.class.php:80
+#: admin/Options.class.php:83
 msgid ""
 "The <strong>jQuery</strong> mode is the old version of the script, which is "
 "kept as default to avoid breaking existing installations. For better "
@@ -57,7 +57,7 @@ msgstr ""
 "εγκαταστάσεις. Για καλύτερη απόδοση, ωστόσο, συνίσταται να δοκιμάσετε κάποια "
 "από τις άλλες επιλογές."
 
-#: includes/Options.class.php:84
+#: admin/Options.class.php:87
 msgid ""
 "<strong>JavaScript</strong> mode is the same script, but with no jQuery "
 "dependency. Also, it allows you to target specific selectors."
@@ -66,7 +66,7 @@ msgstr ""
 "χωρίς την εξάρτηση από την jQuery. Επίσης, σας επιτρέπει να στοχεύσετε "
 "συγκεκριμένους επιλογείς CSS."
 
-#: includes/Options.class.php:88
+#: admin/Options.class.php:91
 msgid ""
 "<strong>PHP</strong> mode will not load any scripts at all and will do the "
 "replacement server-side. It should be faster that the previous options but "
@@ -77,7 +77,7 @@ msgstr ""
 "από τις άλλες επιλογές, αλλά μπορεί να εφαρμοστεί μόνο σε συγκεκριμένα "
 "σημεία του ιστοχώρου σας."
 
-#: includes/Options.class.php:92
+#: admin/Options.class.php:95
 msgid ""
 "<strong>Manual</strong> mode is mostly for those who build their own themes "
 "or want to do things manually. It will practically deactivate all scripts "
@@ -91,11 +91,11 @@ msgstr ""
 "Διατηρεί, ωστόσο, την συνάρτηση<code>remove_greek_accents($text)</code> την "
 "οποία μπορείτε να χρησιμοποιήσετε σε όποιο σημείο του κώδικά σας θέλετε."
 
-#: includes/Options.class.php:97
+#: admin/Options.class.php:100
 msgid "Tips"
 msgstr "Συμβουλές"
 
-#: includes/Options.class.php:99
+#: admin/Options.class.php:102
 msgid ""
 "Options are ordered from the easiest to implement to the most advanced. You "
 "can keep the defaults and forget it or you can try them all until you find "
@@ -106,7 +106,7 @@ msgstr ""
 "δοκιμάσετε όλες τις επιλογές μέχρι να βρείτε την πιο κατάλληλη για την "
 "περίπτωσή σας."
 
-#: includes/Options.class.php:101
+#: admin/Options.class.php:104
 msgid ""
 "If the content that needs to be transformed is on one of the places "
 "supported by the <code>PHP</code> option, you should always prefer it, as it "
@@ -118,7 +118,7 @@ msgstr ""
 "προτιμάτε, καθώς τρέχει σε επίπεδο server και αποφεύγει εντελώς το φόρτωμα "
 "των scripts."
 
-#: includes/Options.class.php:103
+#: admin/Options.class.php:106
 msgid ""
 "If that isn't the case and you use a ready-made theme where you don't want "
 "to mess with the child theme, you should choose the <code>JavaScript</code> "
@@ -130,7 +130,7 @@ msgstr ""
 "Εάν γνωρίζετε τους επιλογείς CSS τους οποίους θέλετε να στοχεύσετε, καλό "
 "είναι να το κάνετε καθώς θα βελτιώσει την απόδοση του script. "
 
-#: includes/Options.class.php:105
+#: admin/Options.class.php:108
 msgid ""
 "If this option doesn't work for you or if you need to support legacy "
 "browsers, you can always switch it to the good old <code>jQuery</code>."
@@ -139,7 +139,7 @@ msgstr ""
 "παλιούς φυλλομετρητές, μπορείτε πάντα να επιστρέψετε στην πατροπαράδοτη "
 "<code>jQuery</code>."
 
-#: includes/Options.class.php:107
+#: admin/Options.class.php:110
 msgid ""
 "If you build a custom theme and you know your PHP, you should turn on the "
 "<code>Manual</code> mode and use the <code>remove_greek_accents($text)</"
@@ -150,15 +150,15 @@ msgstr ""
 "εκτός από την συνάρτηση <code>remove_greek_accents($text)</code> που "
 "μπορείτε να χρησιμοποιήσετε σε οποιοδήποτε σημείο του Θέματός σας."
 
-#: includes/Options.class.php:112
+#: admin/Options.class.php:115
 msgid "FAQ"
 msgstr "Συχνές ερωτήσεις"
 
-#: includes/Options.class.php:114
+#: admin/Options.class.php:117
 msgid "Why would I need this plugin?"
 msgstr "Γιατί χρειάζομαι αυτό το πρόσθετο;"
 
-#: includes/Options.class.php:115
+#: admin/Options.class.php:118
 msgid ""
 "For example, in greek there are accent marks that denote in which syllable "
 "you put the stress on when pronouncing a word. However, when words are "
@@ -170,14 +170,14 @@ msgstr ""
 "διατηρούν τους τόνους στα ελληνικά κείμενα που έχουν μετατραπεί σε κεφαλαία "
 "μέσω CSS (με το text-transform:uppercase)."
 
-#: includes/Options.class.php:117
+#: admin/Options.class.php:120
 msgid ""
 "I use \"text-transform:uppercase\" in greek text but I don't see any accents"
 msgstr ""
 "Ενώ χρησιμοποιώ το \"text-transform:uppercase\" σε ελληνικά κείμενα, δεν "
 "παρατηρώ το πρόβλημα που περιγράφεις"
 
-#: includes/Options.class.php:119
+#: admin/Options.class.php:122
 msgid ""
 "If you use Firefox or a Chromium-based browser like Chrome, the new Edge, "
 "Opera etc., <strong>and</strong> you have set the site language to Greek, "
@@ -193,13 +193,13 @@ msgstr ""
 "Explorer, καθώς και σε κάθε περίπτωση όπου η γλώσσα του ιστοχώρου δεν έχει "
 "οριστεί στα ελληνικά."
 
-#: includes/Options.class.php:121
+#: admin/Options.class.php:124
 msgid "I use Firefox/Chrome/the new Edge but the problem appears there too."
 msgstr ""
 "Κι όμως, χρησιμοποιώ Firefox/Chrome/νέο Edge αλλά το πρόβλημα εμφανίζεται κι "
 "εδώ."
 
-#: includes/Options.class.php:123
+#: admin/Options.class.php:126
 msgid ""
 "Then your site's language isn't set to Greek. If your content is in Greek, "
 "you should set it."
@@ -208,80 +208,105 @@ msgstr ""
 "περιεχόμενο είναι στα ελληνικά και δεν έχεις λόγο για το αντίθετο, καλό "
 "είναι να το κάνεις."
 
-#: includes/Options.class.php:128
+#: admin/Options.class.php:131
 msgid "Support forum"
 msgstr "Φόρουμ υποστήριξης"
 
-#: includes/Options.class.php:130
+#: admin/Options.class.php:133
 #, php-format
 msgid ""
 "Plugin created by <a href=\"%s\" target=\"_blank\">Giorgos Sarigiannidis</a>"
 msgstr "Ανάπτυξη: <a href=\"%s\" target=\"_blank\">Γιώργος Σαρηγιαννίδης</a>"
 
-#: includes/Options.class.php:148
+#: admin/Options.class.php:151
 msgid "jQuery"
 msgstr "jQuery"
 
-#: includes/Options.class.php:153
+#: admin/Options.class.php:156
 msgid "JavaScript"
 msgstr "JavaScript"
 
-#: includes/Options.class.php:158
+#: admin/Options.class.php:161
 msgid "PHP"
 msgstr "PHP"
 
-#: includes/Options.class.php:163
+#: admin/Options.class.php:166
 msgid "Manual"
 msgstr "Χειροκίνητη"
 
-#: includes/Options.class.php:175
+#: admin/Options.class.php:183
+msgid "Include"
+msgstr "Περιορισμός"
+
+#: admin/Options.class.php:191
+msgid "Exclude"
+msgstr "Εξαίρεση"
+
+#: admin/Options.class.php:199
 msgid ""
 "You can use any CSS selector. Multiple selectors should be separated by "
 "comma. Example: <code>.selector-1 > h2, #selector-2, .selector-4 > div span</"
-"code>"
+"code>. Make sure that you copy the selectors exactly as they appear on your "
+"CSS (you can use your browser's developer tools to do so)."
 msgstr ""
 "Μπορείτε να χρησιμοποιήσετε οποιονδήποτε επιλογέα CSS (κλάσεις, ID κλπ). "
 "Πολλαπλοί επιλογείς χωρίζονται με κόμμα. Παράδειγμα: <code>.selector-1 > h2, "
-"#selector-2, .selector-4 > div span</code>"
+"#selector-2, .selector-4 > div span</code>. Βεβαιωθείτε ότι θα αντιγράψετε "
+"τους επιλογείς ακριβώς όπως εμφανίζονται στα CSS (μπορείτε να "
+"χρησιμοποιήσετε ως βοήθημα τα Developer Tools του φυλλομετρητή σας)."
 
-#: includes/Options.class.php:187
+#: admin/Options.class.php:201
+msgid ""
+"Using it with the <code>Include</code> option enabled will target "
+"<strong>only</strong> the given selectors. <code>Exclude</code>, on the "
+"other hand, will target everything <strong>except</strong> from the given "
+"selectors. Leaving it empty will target everything, no matter which option "
+"you choose."
+msgstr ""
+"Χρησιμοποιώντας το με την επιλογή <code>Περιορισμός</code>, θα στοχεύσετε "
+"<strong>μόνο</strong> τους συγκεκριμένους επιλογείς. Η <code>Εξαίρεση</"
+"code>, αντίθετα, θα στοχεύσει στα πάντα <strong>εκτός</strong> από τους "
+"συγκεκριμένους επιλογείς. Αφήνοντας το πεδίο άδειο θα μετατραπούν τα πάντα, "
+"ανεξάρτητα από το τί έχετε επιλέξει."
+
+#: admin/Options.class.php:214
 msgid "Select the parts of the website where the replacement should happen."
 msgstr ""
 "Επιλέξτε τα σημεία του ιστοχώρου σας όπου θέλετε να τρέξει η αντικατάσταση."
 
-#: includes/Options.class.php:194
+#: admin/Options.class.php:221
 msgid "Menu (hooks to <code>wp_nav_menu_items()</code>)"
 msgstr "Μενού (hook στο <code>wp_nav_menu_items()</code>)"
 
-#: includes/Options.class.php:201
+#: admin/Options.class.php:228
 msgid "Title (hooks to <code>the_title()</code>)"
 msgstr "Τίτλος (hook στο<code>the_title()</code>)"
 
-#: includes/Options.class.php:208
+#: admin/Options.class.php:235
 msgid "Excerpt (hooks to <code>the_excerpt()</code>)"
 msgstr "Σύνοψη (hook στο <code>the_excerpt()</code>)"
 
-#: includes/Options.class.php:216
+#: admin/Options.class.php:243
 msgid "Widget title (hooks to <code>widget_title()</code>)"
 msgstr "Τίτλος Μικροεφαρμογών (hook στο <code>widget_title()</code>)"
 
-#: includes/Options.class.php:224
+#: admin/Options.class.php:251
 msgid "Tags (hooks to <code>the_tags()</code>)"
 msgstr "Ετικέτες (hook στο <code>the_tags()</code>)"
 
-#: includes/Options.class.php:232
+#: admin/Options.class.php:259
 msgid "Categories (hooks to <code>the_category()</code>)"
 msgstr "Κατηγορίες (hook στο <code>the_category()</code>)"
 
-#: includes/Options.class.php:239
+#: admin/Options.class.php:266
 msgid "Content (hooks to <code>the_content()</code>)"
 msgstr "Κυρίως περιεχόμενο (hook στο <code>the_content()</code>)"
 
-#: includes/Options.class.php:265
+#: admin/Options.class.php:292
 msgid "Settings Saved"
 msgstr "Οι ρυθμίσεις αποθηκεύτηκαν"
 
-#: includes/Options.class.php:278
+#: admin/Options.class.php:305
 msgid "Save Settings"
 msgstr "Αποθήκευση"
 
@@ -309,5 +334,5 @@ msgid "Giorgos Sarigiannidis"
 msgstr "Γιώργος Σαρηγιαννίδης"
 
 #. Author URI of the plugin/theme
-msgid "http://www.gsarigiannidis.gr/"
-msgstr "http://www.gsarigiannidis.gr/"
+msgid "https://www.gsarigiannidis.gr/"
+msgstr "https://www.gsarigiannidis.gr/"

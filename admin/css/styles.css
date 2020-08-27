@@ -132,6 +132,25 @@ html {
     visibility: visible;
 }
 
+.rua_radio-inline {
+    padding: 0.5em 0 1em 0;
+}
+
+.rua_radio-inline label {
+    padding-right: .5em;
+}
+
+.form-table .rua_field_info p {
+    font-size: 13px;
+}
+
+.rua_radio-inline input:checked + label {
+    font-weight: bold;
+}
+
+#rua_form .form-table legend p {
+    margin-bottom: 1em;
+}
 
 @media all and (min-width: 760px) {
     #rua_form form {
