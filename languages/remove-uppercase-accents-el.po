@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Remove Uppercase Accents\n"
-"POT-Creation-Date: 2020-08-27 00:18+0300\n"
-"PO-Revision-Date: 2020-08-27 00:24+0300\n"
+"POT-Creation-Date: 2020-08-27 16:11+0300\n"
+"PO-Revision-Date: 2020-08-27 16:22+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: el\n"
@@ -208,41 +208,81 @@ msgstr ""
 "περιεχόμενο είναι στα ελληνικά και δεν έχεις λόγο για το αντίθετο, καλό "
 "είναι να το κάνεις."
 
-#: admin/Options.class.php:131
+#: admin/Options.class.php:128
+msgid "How does the \"Exclude\" option works on JavaScript mode?"
+msgstr "Πως λειτουργεί η \"Εξαίρεση\" στην επιλογή \"JavaScript\";"
+
+#: admin/Options.class.php:130
+msgid ""
+"When you have <code>JavaScript</code> mode set and the <code>Exclude</code> "
+"option enabled, the script will scan the styles of the page and build a list "
+"of the selectors containing <code>text-transform:uppercase;</code>. Then, "
+"this list gets compared with the selectors that you manually entered, and if "
+"there are matches, they get removed from the initial list."
+msgstr ""
+"Όταν έχεις επιλέξει ως τρόπο λειτουργίας την <code>JavaScript</code> και "
+"έχεις ορίσει την επιλογή <code>Εξαίρεση</code> το script θα σκανάρει όλα τα "
+"CSS της σελίδας και θα δημιουργήσει μια λίστα με τους επιλογείς που "
+"περιλαμβάνουν την τιμή <code>text-transform:uppercase;</code>. Στη συνέχεια, "
+"θα γίνει αντιπαραβολή της λίστας με τα CSS που έχεις καταχωρήσει χειροκίνητα "
+"και εάν βρεθούν αντιστοιχίσεις θα αφαιρεθούν από την αρχική λίστα. "
+
+#: admin/Options.class.php:132
+msgid ""
+"Therefore, in order for the <code>Exclude</code> option to work, you have to "
+"pass your selectors exactly as they appear on your CSS, for the matching to "
+"be successful (you can use your browser's developer tools to do so)."
+msgstr ""
+"Συνεπώς, για να λειτουργήσει η επιλογή<code>Εξαίρεση</code> θα πρέπει να "
+"βεβαιωθείτε ότι έχετε περάσει τους επιλογείς σας ακριβώς όπως εμφανίζονται "
+"στα CSS σας, ώστε να πετύχει η αντιστοίχιση (μπορείτε να χρησιμοποιήσετε τα "
+"Developer tools του φυλλομετρητή σας)."
+
+#: admin/Options.class.php:134
+msgid ""
+"<code>Include</code>, on the other hand, will use your selectors as is and "
+"will skip entirely the page scanning, which allows you to use any selector "
+"you like."
+msgstr ""
+"Αντίθετα, η επιλογή <code>Include</code> θα χρησιμοποιήσει τα CSS που "
+"δηλώσατε όπως είναι, παρακάμπτοντας εντελώς το σκανάρισμα της σελίδας, κάτι "
+"που σας επιτρέπει να δηλώσετε ό,τι CSS θέλετε."
+
+#: admin/Options.class.php:139
 msgid "Support forum"
 msgstr "Φόρουμ υποστήριξης"
 
-#: admin/Options.class.php:133
+#: admin/Options.class.php:141
 #, php-format
 msgid ""
 "Plugin created by <a href=\"%s\" target=\"_blank\">Giorgos Sarigiannidis</a>"
 msgstr "Ανάπτυξη: <a href=\"%s\" target=\"_blank\">Γιώργος Σαρηγιαννίδης</a>"
 
-#: admin/Options.class.php:151
+#: admin/Options.class.php:159
 msgid "jQuery"
 msgstr "jQuery"
 
-#: admin/Options.class.php:156
+#: admin/Options.class.php:164
 msgid "JavaScript"
 msgstr "JavaScript"
 
-#: admin/Options.class.php:161
+#: admin/Options.class.php:169
 msgid "PHP"
 msgstr "PHP"
 
-#: admin/Options.class.php:166
+#: admin/Options.class.php:174
 msgid "Manual"
 msgstr "Χειροκίνητη"
 
-#: admin/Options.class.php:183
+#: admin/Options.class.php:191
 msgid "Include"
 msgstr "Περιορισμός"
 
-#: admin/Options.class.php:191
+#: admin/Options.class.php:199
 msgid "Exclude"
 msgstr "Εξαίρεση"
 
-#: admin/Options.class.php:199
+#: admin/Options.class.php:207
 msgid ""
 "You can use any CSS selector. Multiple selectors should be separated by "
 "comma. Example: <code>.selector-1 > h2, #selector-2, .selector-4 > div span</"
@@ -255,7 +295,7 @@ msgstr ""
 "τους επιλογείς ακριβώς όπως εμφανίζονται στα CSS (μπορείτε να "
 "χρησιμοποιήσετε ως βοήθημα τα Developer Tools του φυλλομετρητή σας)."
 
-#: admin/Options.class.php:201
+#: admin/Options.class.php:209
 msgid ""
 "Using it with the <code>Include</code> option enabled will target "
 "<strong>only</strong> the given selectors. <code>Exclude</code>, on the "
@@ -269,44 +309,40 @@ msgstr ""
 "συγκεκριμένους επιλογείς. Αφήνοντας το πεδίο άδειο θα μετατραπούν τα πάντα, "
 "ανεξάρτητα από το τί έχετε επιλέξει."
 
-#: admin/Options.class.php:214
+#: admin/Options.class.php:222
 msgid "Select the parts of the website where the replacement should happen."
 msgstr ""
 "Επιλέξτε τα σημεία του ιστοχώρου σας όπου θέλετε να τρέξει η αντικατάσταση."
 
-#: admin/Options.class.php:221
+#: admin/Options.class.php:229
 msgid "Menu (hooks to <code>wp_nav_menu_items()</code>)"
 msgstr "Μενού (hook στο <code>wp_nav_menu_items()</code>)"
 
-#: admin/Options.class.php:228
+#: admin/Options.class.php:236
 msgid "Title (hooks to <code>the_title()</code>)"
 msgstr "Τίτλος (hook στο<code>the_title()</code>)"
 
-#: admin/Options.class.php:235
+#: admin/Options.class.php:243
 msgid "Excerpt (hooks to <code>the_excerpt()</code>)"
 msgstr "Σύνοψη (hook στο <code>the_excerpt()</code>)"
 
-#: admin/Options.class.php:243
+#: admin/Options.class.php:251
 msgid "Widget title (hooks to <code>widget_title()</code>)"
 msgstr "Τίτλος Μικροεφαρμογών (hook στο <code>widget_title()</code>)"
 
-#: admin/Options.class.php:251
+#: admin/Options.class.php:259
 msgid "Tags (hooks to <code>the_tags()</code>)"
 msgstr "Ετικέτες (hook στο <code>the_tags()</code>)"
 
-#: admin/Options.class.php:259
+#: admin/Options.class.php:267
 msgid "Categories (hooks to <code>the_category()</code>)"
 msgstr "Κατηγορίες (hook στο <code>the_category()</code>)"
 
-#: admin/Options.class.php:266
+#: admin/Options.class.php:274
 msgid "Content (hooks to <code>the_content()</code>)"
 msgstr "Κυρίως περιεχόμενο (hook στο <code>the_content()</code>)"
 
-#: admin/Options.class.php:292
-msgid "Settings Saved"
-msgstr "Οι ρυθμίσεις αποθηκεύτηκαν"
-
-#: admin/Options.class.php:305
+#: admin/Options.class.php:306
 msgid "Save Settings"
 msgstr "Αποθήκευση"
 
@@ -336,3 +372,6 @@ msgstr "Γιώργος Σαρηγιαννίδης"
 #. Author URI of the plugin/theme
 msgid "https://www.gsarigiannidis.gr/"
 msgstr "https://www.gsarigiannidis.gr/"
+
+#~ msgid "Settings Saved"
+#~ msgstr "Οι ρυθμίσεις αποθηκεύτηκαν"

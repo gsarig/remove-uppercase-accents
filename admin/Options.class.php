@@ -125,6 +125,14 @@ class Options {
 							'remove-uppercase-accents' ); ?></h4>
 					<p><?php _e( 'Then your site\'s language isn\'t set to Greek. If your content is in Greek, you should set it.',
 							'remove-uppercase-accents' ); ?></p>
+					<h4><?php _e( 'How does the "Exclude" option works on JavaScript mode?',
+							'remove-uppercase-accents' ); ?></h4>
+					<p><?php _e( 'When you have <code>JavaScript</code> mode set and the <code>Exclude</code> option enabled, the script will scan the styles of the page and build a list of the selectors containing <code>text-transform:uppercase;</code>. Then, this list gets compared with the selectors that you manually entered, and if there are matches, they get removed from the initial list.',
+							'remove-uppercase-accents' ); ?></p>
+					<p><?php _e( 'Therefore, in order for the <code>Exclude</code> option to work, you have to pass your selectors exactly as they appear on your CSS, for the matching to be successful (you can use your browser\'s developer tools to do so).',
+							'remove-uppercase-accents' ); ?></p>
+					<p><?php _e( '<code>Include</code>, on the other hand, will use your selectors as is and will skip entirely the page scanning, which allows you to use any selector you like.',
+							'remove-uppercase-accents' ); ?></p>
 				</div>
 			</div>
 			<p class="rua-colophon"><a href="https://wordpress.org/support/plugin/remove-uppercase-accents/"

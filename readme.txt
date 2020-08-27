@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: accents, text transform, uppercase, Greek
 Requires at least: 3.0
 Tested up to: 5.5
-Stable tag: 1.1
+Stable tag: 1.1.1
 License: GPLv2 or later
 
 Automatically removes accented characters from text content uppercase transformed through CSS.
@@ -38,6 +38,14 @@ If you use Firefox or a Chromium-based browser like Chrome, the new Edge, Opera 
 
 Then your site's language isn't set to Greek. If your content is in Greek, you should set it.
 
+= How does the "Exclude" option works on JavaScript mode? =
+
+When you have JavaScript mode set and the Exclude option enabled, the script will scan the styles of the page and build a list of the selectors containing text-transform:uppercase;. Then, this list gets compared with the selectors that you manually entered, and if there are matches, they get removed from the initial list.
+
+Therefore, in order for the Exclude option to work, you have to pass your selectors exactly as they appear on your CSS, for the matching to be successful (you can use your browser's developer tools to do so).
+
+Include, on the other hand, will use your selectors as is and will skip entirely the page scanning, which allows you to use any selector you like.
+
 == Screenshots ==
 
 1. Greek text without the plugin
@@ -46,6 +54,9 @@ Then your site's language isn't set to Greek. If your content is in Greek, you s
 4. PHP mode options
 
 == Changelog ==
+
+= 1.1.1 =
+* Updated documentation
 
 = 1.1 =
 * NEW Feature: Option to choose whether to use the custom selectors inclusively or exclusively on JavaScript mode.
