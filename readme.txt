@@ -56,7 +56,7 @@ Include, on the other hand, will use your selectors as is and will skip entirely
 == Changelog ==
 
 = 1.1.1 =
-* Updated documentation
+* Updated documentation.
 
 = 1.1 =
 * NEW Feature: Option to choose whether to use the custom selectors inclusively or exclusively on JavaScript mode.
