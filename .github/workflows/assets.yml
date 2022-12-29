@@ -2,7 +2,7 @@ name: "👌 IMPROVE: Assets or readme"
 on:
   push:
     branches:
-      - trunk
+      - master
 jobs:
   trunk:
     name: Push to trunk
@@ -12,7 +12,6 @@ jobs:
       - name: WordPress.org plugin asset/readme update
         uses: 10up/action-wordpress-plugin-asset-update@stable
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
           SLUG: "remove-uppercase-accents"
