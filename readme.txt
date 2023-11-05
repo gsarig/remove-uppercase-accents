@@ -3,7 +3,7 @@ Contributors: gsarig
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9LNETAP9JKVAG
 Tags: accents, text transform, uppercase, Greek
 Requires at least: 3.0
-Tested up to: 6.1.1
+Tested up to: 6.4
 Stable tag: 1.1.1
 License: GPLv2 or later
 
